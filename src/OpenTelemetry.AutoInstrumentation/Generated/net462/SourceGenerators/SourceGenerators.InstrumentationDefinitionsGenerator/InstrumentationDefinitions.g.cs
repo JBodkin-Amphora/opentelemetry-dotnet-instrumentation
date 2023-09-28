@@ -19,7 +19,7 @@ internal static partial class InstrumentationDefinitions
 
     private static NativeCallTargetDefinition[] GetDefinitionsArray()
     {
-        var nativeCallTargetDefinitions = new List<NativeCallTargetDefinition>(9);
+        var nativeCallTargetDefinitions = new List<NativeCallTargetDefinition>(15);
         // Traces
         var tracerSettings = Instrumentation.TracerSettings.Value;
         if (tracerSettings.TracesEnabled)
@@ -55,6 +55,22 @@ internal static partial class InstrumentationDefinitions
             if (tracerSettings.EnabledInstrumentations.Contains(TracerInstrumentation.WcfService))
             {
                 nativeCallTargetDefinitions.Add(new("System.ServiceModel", "System.ServiceModel.ServiceHostBase", "InitializeDescription", new[] {"System.Void", "System.ServiceModel.UriSchemeKeyedCollection"}, 4, 0, 0, 4, 65535, 65535, AssemblyFullName, "OpenTelemetry.AutoInstrumentation.Instrumentations.Wcf.Service.ServiceHostIntegration"));
+            }
+
+            // WindowsForms
+            if (tracerSettings.EnabledInstrumentations.Contains(TracerInstrumentation.WindowsForms))
+            {
+                nativeCallTargetDefinitions.Add(new("System.Windows.Forms", "System.Windows.Forms.Button", "OnClick", new[] {"System.Void", "System.EventArgs"}, 4, 0, 0, 6, 65535, 65535, AssemblyFullName, "OpenTelemetry.AutoInstrumentation.Instrumentations.WindowsForms.ButtonIntegration"));
+            }
+
+            // WindowsPresentationFoundation
+            if (tracerSettings.EnabledInstrumentations.Contains(TracerInstrumentation.WindowsPresentationFoundation))
+            {
+                nativeCallTargetDefinitions.Add(new("PresentationFramework", "System.Windows.Controls.Button", "OnClick", new[] {"System.Void"}, 4, 0, 0, 6, 65535, 65535, AssemblyFullName, "OpenTelemetry.AutoInstrumentation.Instrumentations.WindowsPresentationFoundation.ButtonIntegration"));
+                nativeCallTargetDefinitions.Add(new("WindowsBase", "System.Windows.Threading.DispatcherOperation", ".ctor", new[] {"System.Windows.Threading.DispatcherOperation", "System.Windows.Threading.Dispatcher", "System.Delegate", "System.Windows.Threading.DispatcherPriority", "System.Object", "System.Int32", "System.Windows.Threading.DispatcherOperationTaskSource", "System.Boolean"}, 4, 0, 0, 6, 65535, 65535, AssemblyFullName, "OpenTelemetry.AutoInstrumentation.Instrumentations.WindowsPresentationFoundation.DispatcherOperationIntegration"));
+                nativeCallTargetDefinitions.Add(new("IBatisNet.DataMapper", "IBatisNet.DataMapper.SqlMapper", "QueryForList", new[] {"System.Collections.IList", "System.String", "System.Object"}, 1, 0, 0, 1, 65535, 65535, AssemblyFullName, "OpenTelemetry.AutoInstrumentation.Instrumentations.WindowsPresentationFoundation.IBatisQueryForListIntegration"));
+                nativeCallTargetDefinitions.Add(new("IBatisNet.DataMapper", "IBatisNet.DataMapper.SqlMapper", "QueryForObject", new[] {"System.Object", "System.String", "System.Object"}, 1, 0, 0, 1, 65535, 65535, AssemblyFullName, "OpenTelemetry.AutoInstrumentation.Instrumentations.WindowsPresentationFoundation.IBatisQueryForObjectIntegration"));
+                nativeCallTargetDefinitions.Add(new("PresentationCore", "System.Windows.Media.MediaContext", "AddLoadedOrUnloadedCallback", new[] {"MS.Internal.LoadedOrUnloadedOperation", "System.Windows.Threading.DispatcherOperationCallback", "System.Windows.DependencyObject"}, 4, 0, 0, 6, 65535, 65535, AssemblyFullName, "OpenTelemetry.AutoInstrumentation.Instrumentations.WindowsPresentationFoundation.MediaContextIntegration"));
             }
         }
 

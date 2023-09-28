@@ -125,5 +125,15 @@ internal enum TracerInstrumentation
     /// <summary>
     /// Azure SDK instrumentation.
     /// </summary>
-    Azure = 18
+    Azure = 18,
+
+    /// <summary>
+    /// Windows Forms instrumentation.
+    /// </summary>
+    WindowsForms = 19,
+
+    /// <summary>
+    /// Windows Presentation Foundation instrumentation.
+    /// </summary>
+    WindowsPresentationFoundation = 20
 }

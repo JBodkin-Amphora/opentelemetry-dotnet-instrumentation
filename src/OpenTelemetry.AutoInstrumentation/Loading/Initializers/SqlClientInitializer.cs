@@ -47,6 +47,8 @@ internal class SqlClientInitializer
         var options = new OpenTelemetry.Instrumentation.SqlClient.SqlClientInstrumentationOptions();
         _pluginManager.ConfigureTracesOptions(options);
 
+        options.SetDbStatementForText = true;
+
         var instrumentation = Activator.CreateInstance(instrumentationType, options)!;
 
         lifespanManager.Track(instrumentation);

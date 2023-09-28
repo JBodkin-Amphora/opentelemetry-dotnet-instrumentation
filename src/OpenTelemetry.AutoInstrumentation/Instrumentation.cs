@@ -321,6 +321,10 @@ internal static class Instrumentation
                     break;
                 case TracerInstrumentation.MySqlConnector:
                     break;
+                case TracerInstrumentation.WindowsForms:
+                    break;
+                case TracerInstrumentation.WindowsPresentationFoundation:
+                    break;
                 default:
                     Logger.Warning($"Configured trace instrumentation type is not supported: {instrumentation}");
                     if (FailFastSettings.Value.FailFast)

@@ -203,7 +203,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestApplication.Azure", "te
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestApplication.Wcf.Client.DotNet", "test\test-applications\integrations\TestApplication.Wcf.Client.DotNet\TestApplication.Wcf.Client.DotNet.csproj", "{EDE168E0-DBCD-4DE3-B55A-4B633ED6565E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApplication.Razor", "test\test-applications\integrations\TestApplication.Razor\TestApplication.Razor.csproj", "{1C76773E-2582-40DB-A720-3798E3928876}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestApplication.Razor", "test\test-applications\integrations\TestApplication.Razor\TestApplication.Razor.csproj", "{1C76773E-2582-40DB-A720-3798E3928876}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestApplication.WindowsPresentationFoundation", "test\test-applications\integrations\TestApplication.WindowsPresentationFoundation\TestApplication.WindowsPresentationFoundation.csproj", "{1AEBA6B1-5277-43EA-84D6-D9EFCA163EF8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApplication.WindowsForms", "test\test-applications\integrations\TestApplication.WindowsForms\TestApplication.WindowsForms.csproj", "{19BE7A2D-7F93-4592-B83F-1B677DF8174C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -977,6 +981,30 @@ Global
 		{1C76773E-2582-40DB-A720-3798E3928876}.Release|x64.Build.0 = Release|x64
 		{1C76773E-2582-40DB-A720-3798E3928876}.Release|x86.ActiveCfg = Release|x86
 		{1C76773E-2582-40DB-A720-3798E3928876}.Release|x86.Build.0 = Release|x86
+		{1AEBA6B1-5277-43EA-84D6-D9EFCA163EF8}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{1AEBA6B1-5277-43EA-84D6-D9EFCA163EF8}.Debug|Any CPU.Build.0 = Debug|x64
+		{1AEBA6B1-5277-43EA-84D6-D9EFCA163EF8}.Debug|x64.ActiveCfg = Debug|x64
+		{1AEBA6B1-5277-43EA-84D6-D9EFCA163EF8}.Debug|x64.Build.0 = Debug|x64
+		{1AEBA6B1-5277-43EA-84D6-D9EFCA163EF8}.Debug|x86.ActiveCfg = Debug|x86
+		{1AEBA6B1-5277-43EA-84D6-D9EFCA163EF8}.Debug|x86.Build.0 = Debug|x86
+		{1AEBA6B1-5277-43EA-84D6-D9EFCA163EF8}.Release|Any CPU.ActiveCfg = Release|x64
+		{1AEBA6B1-5277-43EA-84D6-D9EFCA163EF8}.Release|Any CPU.Build.0 = Release|x64
+		{1AEBA6B1-5277-43EA-84D6-D9EFCA163EF8}.Release|x64.ActiveCfg = Release|x64
+		{1AEBA6B1-5277-43EA-84D6-D9EFCA163EF8}.Release|x64.Build.0 = Release|x64
+		{1AEBA6B1-5277-43EA-84D6-D9EFCA163EF8}.Release|x86.ActiveCfg = Release|x86
+		{1AEBA6B1-5277-43EA-84D6-D9EFCA163EF8}.Release|x86.Build.0 = Release|x86
+		{19BE7A2D-7F93-4592-B83F-1B677DF8174C}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{19BE7A2D-7F93-4592-B83F-1B677DF8174C}.Debug|Any CPU.Build.0 = Debug|x64
+		{19BE7A2D-7F93-4592-B83F-1B677DF8174C}.Debug|x64.ActiveCfg = Debug|x64
+		{19BE7A2D-7F93-4592-B83F-1B677DF8174C}.Debug|x64.Build.0 = Debug|x64
+		{19BE7A2D-7F93-4592-B83F-1B677DF8174C}.Debug|x86.ActiveCfg = Debug|x86
+		{19BE7A2D-7F93-4592-B83F-1B677DF8174C}.Debug|x86.Build.0 = Debug|x86
+		{19BE7A2D-7F93-4592-B83F-1B677DF8174C}.Release|Any CPU.ActiveCfg = Release|x64
+		{19BE7A2D-7F93-4592-B83F-1B677DF8174C}.Release|Any CPU.Build.0 = Release|x64
+		{19BE7A2D-7F93-4592-B83F-1B677DF8174C}.Release|x64.ActiveCfg = Release|x64
+		{19BE7A2D-7F93-4592-B83F-1B677DF8174C}.Release|x64.Build.0 = Release|x64
+		{19BE7A2D-7F93-4592-B83F-1B677DF8174C}.Release|x86.ActiveCfg = Release|x86
+		{19BE7A2D-7F93-4592-B83F-1B677DF8174C}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -1051,6 +1079,8 @@ Global
 		{3A125210-A784-4982-ACDB-C3442E414E44} = {E409ADD3-9574-465C-AB09-4324D205CC7C}
 		{EDE168E0-DBCD-4DE3-B55A-4B633ED6565E} = {E409ADD3-9574-465C-AB09-4324D205CC7C}
 		{1C76773E-2582-40DB-A720-3798E3928876} = {E409ADD3-9574-465C-AB09-4324D205CC7C}
+		{1AEBA6B1-5277-43EA-84D6-D9EFCA163EF8} = {E409ADD3-9574-465C-AB09-4324D205CC7C}
+		{19BE7A2D-7F93-4592-B83F-1B677DF8174C} = {E409ADD3-9574-465C-AB09-4324D205CC7C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {160A1D00-1F5B-40F8-A155-621B4459D78F}
